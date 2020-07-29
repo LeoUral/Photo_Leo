@@ -1,6 +1,57 @@
 /*начало*/
 
-html {
+html,
+body {
     margin: 0;
     padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+.container {
+    width: 75%;
+    background-color: #ccc;
+    margin: 0 auto;
+}
+
+.head {
+    &__box {
+        display: flex;
+    }
+}
+
+.head {
+    &__logo {
+        width: 12%;
+        margin: 0 0 0 10%;
+        padding: 3% 0 0 0;
+        &_image {
+            width: 150px;
+            min-height: 50px;
+            background-image: url("../img/Logo_LEO.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &_phone {
+            width: 150px;
+            margin-top: 3%;
+            text-align: center;
+        }
+    }
+}
+
+.menu {
+    &__block {
+        &_item {}
+        &_link {}
+    }
+}
+
+.headihg {}
+
+.subtitle {
+    &_down {}
 }

@@ -1,6 +1,44 @@
 @charset "UTF-8";
 /*начало*/
-html {
+html,
+body {
   margin: 0;
   padding: 0;
+}
+
+body {
+  width: 100%;
+}
+
+.container {
+  width: 75%;
+  background-color: #ccc;
+  margin: 0 auto;
+}
+
+.head__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.head__logo {
+  width: 12%;
+  margin: 0 0 0 10%;
+  padding: 3% 0 0 0;
+}
+
+.head__logo_image {
+  width: 150px;
+  min-height: 50px;
+  background-image: url("../img/Logo_LEO.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.head__logo_phone {
+  width: 150px;
+  margin-top: 3%;
+  text-align: center;
 }
