@@ -19,6 +19,8 @@ body {
 .head {
     &__box {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 }
 
@@ -44,9 +46,31 @@ body {
 }
 
 .menu {
+    width: 50%;
     &__block {
-        &_item {}
-        &_link {}
+        width: 100%;
+        margin: 6.2% 0 0 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: flex-end;
+        &_item {
+            display: block;
+            width: 20%;
+            height: 30px;
+            border: 1px solid #000;
+            border-radius: 15px;
+            margin: 0 3% 0 0;
+            list-style-type: none;
+            box-sizing: border-box;
+        }
+        &_link {
+            display: block;
+            text-align: center;
+            padding: 5px 0;
+            text-decoration: none;
+        }
     }
 }
 
