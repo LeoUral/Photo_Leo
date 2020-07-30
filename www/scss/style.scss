@@ -1,5 +1,5 @@
-/*начало*/
-
+@import "_font";
+@import "_variables";
 html,
 body {
     margin: 0;
@@ -11,12 +11,16 @@ body {
 }
 
 .container {
-    width: 75%;
+    width: 100%;
     background-color: #ccc;
     margin: 0 auto;
 }
 
 .head {
+    background-image: url("../img/Fon_Leo-photo-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     &__box {
         display: flex;
         flex-wrap: wrap;
@@ -41,6 +45,7 @@ body {
             width: 150px;
             margin-top: 3%;
             text-align: center;
+            color: $colorTextMain;
         }
     }
 }
@@ -70,6 +75,7 @@ body {
             text-align: center;
             padding: 5px 0;
             text-decoration: none;
+            color: $colorTextMain;
         }
     }
 }
