@@ -31,7 +31,7 @@
                 </nav>
             </div>
             <div class="headihg">Леонид Кудряшов</div>
-            <div class="subtitle">свадебный фотограф</div>
+            <div class="subtitle">~ свадебный фотограф ~</div>
             <div class="subtitle_down">г. Екатеринбург</div>
         </section>
     </header>
@@ -41,25 +41,23 @@
             <div class="title">Приветствую Вас!</div>
             <div class="content">
                 <div class="content__text">
-                    <p class="content__text-paragraf">Меня зовут Леонид, я фотограф, человек который свое детское, юношеское хобби перевел на профессиональный уровень два года назад.</p>
+                    <p class="content__text-paragraf">Меня зовут Леонид, я фотограф, человек который свое детское, юношеское хобби перевел на профессиональный уровень несколько лет назад.</p>
                     <p class="content__text-paragraf">Основное направление - свадьбы, разнообразные тематические фотосессии (уличные, студийные), портретные съёмки, но также не отказываюсь и от репортажной фотосъёмки.</p>
                     <p class="content__text-paragraf">Постоянно практикуюсь и развиваю своё мастерство, прохожу мастер-классы у именитых фотографов. Мир фотографии разнообразен и обширен, поэтому всегда нахожу для себя что-то новое.</p>
                 </div>
-                <div class="content__image">
-                    <img src="./www/img/Face.jpg" alt="face">
-                </div>
+                <div class="content__image"></div>
             </div>
             <div class="buttons-block">
                 <div class="btns-block__look-portfolio">
                     <a href="#" class="btns-block__look-portfolio_link">
-                        <img class="btns-block__look-portfolio_img" src="./www/img/fotoapparat_icon.png" alt="fotoapparat">
+                        <div class="btns-block__look-portfolio_img-port"></div>
                         <span class="btns-block__look-portfolio_text">посмотреть портфолио</span>
                     </a>
                 </div>
                 <div class="btns-block__look-price">
-                    <a href="#" class="btns-block__look-portfolio_link">
-                        <img class="btns-block__look-portfolio_img" src="./www/img/prise_icon.png" alt="price">
-                        <span class="btns-block__look-portfolio_text">узнать цены</span>
+                    <a href="#" class="btns-block__look-price_link">
+                        <div class="btns-block__look-price_img-price"></div>
+                        <span class="btns-block__look-price_text">узнать цены</span>
                     </a>
                 </div>
             </div>
@@ -67,8 +65,8 @@
         <section class="portfolio container">
             <!-- ! блок изменен и отличается от дизайна -->
             <div class="title">Мои работы</div>
-            <div class="content">
-                <div class="content__text">В этих галлереях размещены мои работы по темам</div>
+            <div class="content2">
+                <div class="content2__text2">В этих галлереях размещены мои работы</div>
             </div>
             <div class="portfolio__photos-block">
                 <!-- ! разместить модуль JS для выбора просмотра работ -->
@@ -76,17 +74,61 @@
         </section>
         <section class="price container">
             <!-- ! Блок создать самостоятельно использую общий дизайн -->
+            <div class="title">стоимость работ</div>
+            <div class="content2">
+                <div class="content2__text2">Расскажу Вам о стоимости работ</div>
+            </div>
+            <div class="price__pricing-block">
+                <!-- ! тут блок с ценами -->
+            </div>
         </section>
         <section class="comment container">
             <div class="title">отзывы</div>
-            <div class="content">
-                <div class="content__text">Тут размещеные отзывы моих клиентов из разных источников</div>
+            <div class="content2">
+                <div class="content2__text2">Тут размещеные отзывы моих клиентов из разных источников</div>
             </div>
             <div class="comment__response-block">
                 <!-- ! отзывы сделалат в виде карусели -->
             </div>
         </section>
-        <section class="feedback container"></section>
+        <section class="feedback container">
+            <div class="title">контакты</div>
+            <div class="content2">
+                <div class="content2__text2">Со мной можно связаться разными способами, выбирайте</div>
+            </div>
+            <div class="feedback__form-block">
+                <div class="feedback__contacts-block">
+                    <ul class="feedback__list-contacts">
+                        <li class="feedback__list-contacts_contact-link">
+                            <a href="#" class="feedback__list-contacts_links">телефон</a>
+                        </li>
+                        <li class="feedback__list-contacts_contact-link">
+                            <a href="#" class="feedback__list-contacts_links">электронная почта</a>
+                        </li>
+                        <li class="feedback__list-contacts_contact-link">
+                            <a href="#" class="feedback__list-contacts_links">ссылка на ВК</a>
+                        </li>
+                        <li class="feedback__list-contacts_contact-link">
+                            <a href="#" class="feedback__list-contacts_links">ссылка на инстаграмм</a>
+                        </li>
+                        <li class="feedback__list-contacts_contact-link">
+                            <a href="#" class="feedback__list-contacts_links">ссылка на телеграмм</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ! Блок для размещения формы -->
+                <form action="#" class="feedback__form-form">
+                    <div class="feedback__title-text">Оставте сообщение и я свяжусь с Вами</div>
+                    <label for="" class="feedback__form-form_text">Ваше имя</label>
+                    <input type="text" class="feedback__form-form_in-name" placeholder="Ваше имя">
+                    <label for="" class="feedback__form-form_text">Ваш телефон</label>
+                    <input type="tel" class="feedback__form-form_in-phone" placeholder="телефон" name="phone">
+                    <label for="" class="feedback__form-form_text">Ваш коментарий</label>
+                    <textarea type="text" class="feedback__form-form_in-text" placeholder="коментарий"></textarea>
+                    <input type="submit" class="feedback__form-form_in-send" value="отправить">
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer>

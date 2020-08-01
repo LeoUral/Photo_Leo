@@ -3,16 +3,12 @@
 class Height {
     constructor() {
         this.height = 0;
-        this.blockContainer;
+        this.blockContainer = document.querySelectorAll('.container');
     }
 
     clientHeight() {
         this.height = document.documentElement.clientHeight;
         console.log(this.height);
-    }
-
-    getBlockContainer() {
-        return this.blockContainer = document.querySelectorAll('.container');
     }
 
     sendHeightInStyle() {
@@ -23,7 +19,6 @@ class Height {
 
     init() {
         this.clientHeight();
-        this.getBlockContainer();
         this.sendHeightInStyle();
     }
 

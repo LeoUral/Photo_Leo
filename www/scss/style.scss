@@ -14,6 +14,7 @@ body {
     width: 100%;
     background-color: #ccc;
     margin: 0 auto;
+    font-family: $fontFirst;
 }
 
 .head {
@@ -45,7 +46,8 @@ body {
             width: 150px;
             margin-top: 3%;
             text-align: center;
-            color: $colorTextMain;
+            color: $colorTextSecond;
+            font-weight: 700;
         }
     }
 }
@@ -63,9 +65,6 @@ body {
         &_item {
             display: block;
             width: 20%;
-            height: 30px;
-            border: 1px solid #000;
-            border-radius: 15px;
             margin: 0 3% 0 0;
             list-style-type: none;
             box-sizing: border-box;
@@ -73,15 +72,259 @@ body {
         &_link {
             display: block;
             text-align: center;
-            padding: 5px 0;
+            padding: 4px 0 6px 0;
             text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            color: $colorSecond;
+            border-radius: 20px;
+            transition-duration: 0.5s;
+            transition-property: background-color;
+            cursor: pointer;
+        }
+        &_link:hover {
+            border-radius: 20px;
+            background-color: $colorSecond;
             color: $colorTextMain;
+            box-sizing: border-box;
         }
     }
 }
 
-.headihg {}
+.headihg {
+    width: 40%;
+    margin: 15% auto 0 auto;
+    text-align: center;
+    font-size: 60px;
+    color: $colorSecond;
+    border-bottom: 3px solid $colorSecond;
+    background-color: $colorTextMain_transparent;
+    box-shadow: 0 0 40px 60px $colorTextMain_transparent;
+    border-radius: 25% 25% 0 0;
+}
 
 .subtitle {
-    &_down {}
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    color: $colorSecond;
+    background-color: $colorTextMain_transparent;
+    box-shadow: 0 0 40px 60px $colorTextMain_transparent;
+    border-radius: 0 0 25% 25%;
+    &_down {
+        width: 40%;
+        margin: 20% auto 0 auto;
+        text-align: center;
+        font-size: 28px;
+    }
+}
+
+.about {
+    background-color: $colorBG;
+}
+
+.title {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 36px;
+    padding: 5% 0 0 0;
+}
+
+.content {
+    margin: 5% auto 0 auto;
+    display: flex;
+    &__text {
+        width: 30%;
+        margin: 0 5% 0 20%;
+    }
+    &__text-paragraf {
+        text-indent: 25px;
+        font-size: 20px;
+    }
+    &__image {
+        width: 25%;
+        background-image: url("../img/Face.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.buttons-block {
+    width: 40%;
+    margin: 3% auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns-block {
+    &__look-portfolio {
+        &_link {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+        &_img-port {
+            width: 100%;
+            height: 80px;
+            background-image: url("../img/fotoapparat_icon.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &_text {
+            margin: 5% auto 0 auto;
+            color: $colorTextSecond;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        &_link:hover {
+            opacity: 0.5;
+            /*filter: brightness(1.9);*/
+        }
+    }
+    &__look-price {
+        &_link {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+        &_img-price {
+            width: 100%;
+            height: 80px;
+            background-image: url("../img/prise_icon.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &_text {
+            margin: 5% auto 0 auto;
+            color: $colorTextSecond;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        &_link:hover {
+            opacity: 0.5;
+            /*filter: brightness(1.9);*/
+        }
+    }
+}
+
+.portfolio {
+    background-image: url("../img/fon_price.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &__photos-block {
+        // ! блок для размещения галлереи из JS
+        margin: 1% auto 0 auto;
+        background-color: $colorBG_transparent;
+        width: 80%;
+        min-height: 500px;
+    }
+}
+
+.content2 {
+    &__text2 {
+        width: 50%;
+        margin: 2% auto;
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+.price {
+    background-color: $colorBG;
+    &__pricing-block {
+        // ! блок для размещения галлереи из JS
+        margin: 1% auto 0 auto;
+        background-color: $colorTextMain_transparent;
+        width: 80%;
+        min-height: 500px;
+    }
+}
+
+.comment {
+    background-image: url("../img/Fon_comments.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &__response-block {
+        // ! блок для размещения галлереи из JS
+        margin: 1% auto 0 auto;
+        background-color: $colorBG_transparent;
+        width: 80%;
+        min-height: 500px;
+    }
+}
+
+.feedback {
+    background-image: url("../img/Fon_contacts.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    &__form-block {
+        margin: 1% auto 0 auto;
+        // background-color: $colorTextMain_transparent;
+        width: 80%;
+        min-height: 500px;
+    }
+    &__contacts-block {
+        width: 350px;
+        margin: 0 0 0 60%;
+        padding: 1% 0 3% 0;
+    }
+    &__list-contacts {
+        list-style-type: none;
+        &_contact-link {
+            margin: 1% auto;
+        }
+        &_links {
+            text-decoration: none;
+        }
+    }
+    &__title-text {
+        color: $colorTextMain;
+        margin: 5% auto 2% auto;
+    }
+    &__form-form input {
+        height: 25px;
+    }
+    &__form-form {
+        width: 350px;
+        margin: 0 0 0 60%;
+        display: flex;
+        flex-direction: column;
+        background-color: $colorBG_transparent;
+        &_text {
+            color: $colorTextMain;
+            text-align: center;
+            margin: 2% 0 1% 0;
+        }
+        &_in-name {
+            width: 70%;
+            margin: 0 auto;
+        }
+        &_in-phone {
+            width: 70%;
+            margin: 0 auto;
+        }
+        &_in-text {
+            width: 70%;
+            height: 70px;
+            resize: none;
+            margin: 0 auto;
+        }
+        &_in-send {
+            width: 180px;
+            height: 40px;
+            margin: 5% auto 5% auto;
+        }
+    }
 }

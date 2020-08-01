@@ -1,3 +1,5 @@
+/*fonts*/
+/*colors*/
 html,
 body {
   margin: 0;
@@ -12,6 +14,7 @@ body {
   width: 100%;
   background-color: #ccc;
   margin: 0 auto;
+  font-family: "Tahoma Regular";
 }
 
 .head {
@@ -51,7 +54,8 @@ body {
   width: 150px;
   margin-top: 3%;
   text-align: center;
-  color: #fff;
+  color: #000000;
+  font-weight: 700;
 }
 
 .menu {
@@ -79,9 +83,6 @@ body {
 .menu__block_item {
   display: block;
   width: 20%;
-  height: 30px;
-  border: 1px solid #000;
-  border-radius: 15px;
   margin: 0 3% 0 0;
   list-style-type: none;
   -webkit-box-sizing: border-box;
@@ -91,7 +92,301 @@ body {
 .menu__block_link {
   display: block;
   text-align: center;
-  padding: 5px 0;
+  padding: 4px 0 6px 0;
   text-decoration: none;
-  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  color: #50133c;
+  border-radius: 20px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  cursor: pointer;
+}
+
+.menu__block_link:hover {
+  border-radius: 20px;
+  background-color: #50133c;
+  color: #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.headihg {
+  width: 40%;
+  margin: 15% auto 0 auto;
+  text-align: center;
+  font-size: 60px;
+  color: #50133c;
+  border-bottom: 3px solid #50133c;
+  background-color: #ffffff44;
+  -webkit-box-shadow: 0 0 40px 60px #ffffff44;
+          box-shadow: 0 0 40px 60px #ffffff44;
+  border-radius: 25% 25% 0 0;
+}
+
+.subtitle {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+  color: #50133c;
+  background-color: #ffffff44;
+  -webkit-box-shadow: 0 0 40px 60px #ffffff44;
+          box-shadow: 0 0 40px 60px #ffffff44;
+  border-radius: 0 0 25% 25%;
+}
+
+.subtitle_down {
+  width: 40%;
+  margin: 20% auto 0 auto;
+  text-align: center;
+  font-size: 28px;
+}
+
+.about {
+  background-color: #929b80;
+}
+
+.title {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 36px;
+  padding: 5% 0 0 0;
+}
+
+.content {
+  margin: 5% auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content__text {
+  width: 30%;
+  margin: 0 5% 0 20%;
+}
+
+.content__text-paragraf {
+  text-indent: 25px;
+  font-size: 20px;
+}
+
+.content__image {
+  width: 25%;
+  background-image: url("../img/Face.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.buttons-block {
+  width: 40%;
+  margin: 3% auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btns-block__look-portfolio_link {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.btns-block__look-portfolio_img-port {
+  width: 100%;
+  height: 80px;
+  background-image: url("../img/fotoapparat_icon.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.btns-block__look-portfolio_text {
+  margin: 5% auto 0 auto;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.btns-block__look-portfolio_link:hover {
+  opacity: 0.5;
+  /*filter: brightness(1.9);*/
+}
+
+.btns-block__look-price_link {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.btns-block__look-price_img-price {
+  width: 100%;
+  height: 80px;
+  background-image: url("../img/prise_icon.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.btns-block__look-price_text {
+  margin: 5% auto 0 auto;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.btns-block__look-price_link:hover {
+  opacity: 0.5;
+  /*filter: brightness(1.9);*/
+}
+
+.portfolio {
+  background-image: url("../img/fon_price.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio__photos-block {
+  margin: 1% auto 0 auto;
+  background-color: #929b8050;
+  width: 80%;
+  min-height: 500px;
+}
+
+.content2__text2 {
+  width: 50%;
+  margin: 2% auto;
+  font-size: 20px;
+  text-align: center;
+}
+
+.price {
+  background-color: #929b80;
+}
+
+.price__pricing-block {
+  margin: 1% auto 0 auto;
+  background-color: #ffffff44;
+  width: 80%;
+  min-height: 500px;
+}
+
+.comment {
+  background-image: url("../img/Fon_comments.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.comment__response-block {
+  margin: 1% auto 0 auto;
+  background-color: #929b8050;
+  width: 80%;
+  min-height: 500px;
+}
+
+.feedback {
+  background-image: url("../img/Fon_contacts.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+}
+
+.feedback__form-block {
+  margin: 1% auto 0 auto;
+  width: 80%;
+  min-height: 500px;
+}
+
+.feedback__contacts-block {
+  width: 350px;
+  margin: 0 0 0 60%;
+  padding: 1% 0 3% 0;
+}
+
+.feedback__list-contacts {
+  list-style-type: none;
+}
+
+.feedback__list-contacts_contact-link {
+  margin: 1% auto;
+}
+
+.feedback__list-contacts_links {
+  text-decoration: none;
+}
+
+.feedback__title-text {
+  color: #ffffff;
+  margin: 5% auto 2% auto;
+}
+
+.feedback__form-form input {
+  height: 25px;
+}
+
+.feedback__form-form {
+  width: 350px;
+  margin: 0 0 0 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #929b8050;
+}
+
+.feedback__form-form_text {
+  color: #ffffff;
+  text-align: center;
+  margin: 2% 0 1% 0;
+}
+
+.feedback__form-form_in-name {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.feedback__form-form_in-phone {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.feedback__form-form_in-text {
+  width: 70%;
+  height: 70px;
+  resize: none;
+  margin: 0 auto;
+}
+
+.feedback__form-form_in-send {
+  width: 180px;
+  height: 40px;
+  margin: 5% auto 5% auto;
 }
