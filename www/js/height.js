@@ -13,7 +13,7 @@ class Height {
 
     sendHeightInStyle() {
         this.blockContainer.forEach((item, i) => {
-            this.blockContainer[i].style.height = this.height + `px`;
+            this.blockContainer[i].style.minHeight = this.height + `px`;
         })
     }
 

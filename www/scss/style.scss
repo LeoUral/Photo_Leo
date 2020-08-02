@@ -17,6 +17,10 @@ body {
     font-family: $fontFirst;
 }
 
+.block-off {
+    display: none;
+}
+
 .head {
     background-image: url("../img/Fon_Leo-photo-1.jpg");
     background-size: cover;
@@ -256,12 +260,68 @@ body {
     background-position: center;
     background-size: cover;
     &__response-block {
-        // ! блок для размещения галлереи из JS
         margin: 1% auto 0 auto;
-        background-color: $colorBG_transparent;
+        // background-color: $colorBG_transparent;
         width: 80%;
         min-height: 500px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        &_arrow-left {
+            background-color: inherit;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            outline: inherit;
+        }
+        &_arrow-left:hover {
+            filter: brightness(1.2);
+        }
+        &_arrow-right {
+            background-color: inherit;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            outline: inherit;
+        }
+        &_arrow-right:hover {
+            filter: brightness(1.2);
+        }
+        &_block-in {
+            // ! блок для размещения галлереи из JS
+            width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
     }
+}
+
+// * блок отзывов
+.main-comment-block {
+    // * margin-left: -XXX;
+    width: 9999px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transition: 1s;
+}
+
+.comment-block {
+    display: block;
+    padding: 20px;
+    height: 400px;
+    margin: 30px 10px 10px 0;
+    background-color: $colorBG_2_transparent;
+}
+
+.comment-block span {
+    display: block;
+    text-align: center;
+}
+
+.comment-block p {
+    padding: 30px 15px;
 }
 
 .feedback {
@@ -271,9 +331,11 @@ body {
     background-size: cover;
     &__form-block {
         margin: 1% auto 0 auto;
-        // background-color: $colorTextMain_transparent;
         width: 80%;
         min-height: 500px;
+    }
+    &__form-block:hover &__form-form {
+        opacity: 1;
     }
     &__contacts-block {
         width: 350px;
@@ -283,18 +345,30 @@ body {
     &__list-contacts {
         list-style-type: none;
         &_contact-link {
-            margin: 1% auto;
+            margin: 3% auto;
+            cursor: pointer;
         }
         &_links {
             text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            transition-duration: 0.5s;
+        }
+        &_links-icon {
+            margin: 0 0 0 0;
+        }
+        &_links-text {
+            display: block;
+            color: $colorBG;
+            padding: 5px;
+        }
+        &_links:hover {
+            filter: brightness(1.9);
         }
     }
     &__title-text {
         color: $colorTextMain;
         margin: 5% auto 2% auto;
-    }
-    &__form-form input {
-        height: 25px;
     }
     &__form-form {
         width: 350px;
@@ -302,6 +376,8 @@ body {
         display: flex;
         flex-direction: column;
         background-color: $colorBG_transparent;
+        opacity: 0.5;
+        transition: 0.5s opacity;
         &_text {
             color: $colorTextMain;
             text-align: center;
@@ -309,10 +385,12 @@ body {
         }
         &_in-name {
             width: 70%;
+            height: 25px;
             margin: 0 auto;
         }
         &_in-phone {
             width: 70%;
+            height: 25px;
             margin: 0 auto;
         }
         &_in-text {
@@ -325,6 +403,22 @@ body {
             width: 180px;
             height: 40px;
             margin: 5% auto 5% auto;
+            padding: 0 0 3px 0;
+            border: 2px solid $colorSecond;
+            border-radius: 8px;
+            font-family: $fontFirst;
+            font-size: 20px;
+            background-color: inherit;
+            color: $colorSecond;
+            cursor: pointer;
+            transition-duration: 0.5s, 0.5s;
+            transition-property: background-color, color;
+            transition-delay: 0s, 0.1s;
+            box-sizing: border-box;
+        }
+        &_in-send:hover {
+            background-color: $colorSecond;
+            color: $colorTextMain;
         }
     }
 }

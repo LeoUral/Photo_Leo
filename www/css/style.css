@@ -17,6 +17,10 @@ body {
   font-family: "Tahoma Regular";
 }
 
+.block-off {
+  display: none;
+}
+
 .head {
   background-image: url("../img/Fon_Leo-photo-1.jpg");
   background-size: cover;
@@ -304,9 +308,85 @@ body {
 
 .comment__response-block {
   margin: 1% auto 0 auto;
-  background-color: #929b8050;
   width: 80%;
   min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.comment__response-block_arrow-left {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  outline: inherit;
+}
+
+.comment__response-block_arrow-left:hover {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}
+
+.comment__response-block_arrow-right {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  outline: inherit;
+}
+
+.comment__response-block_arrow-right:hover {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}
+
+.comment__response-block_block-in {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.main-comment-block {
+  width: 9999px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.comment-block {
+  display: block;
+  padding: 20px;
+  height: 400px;
+  margin: 30px 10px 10px 0;
+  background-color: #cab7c3d5;
+}
+
+.comment-block span {
+  display: block;
+  text-align: center;
+}
+
+.comment-block p {
+  padding: 30px 15px;
 }
 
 .feedback {
@@ -322,6 +402,10 @@ body {
   min-height: 500px;
 }
 
+.feedback__form-block:hover .feedback__form-form {
+  opacity: 1;
+}
+
 .feedback__contacts-block {
   width: 350px;
   margin: 0 0 0 60%;
@@ -333,20 +417,41 @@ body {
 }
 
 .feedback__list-contacts_contact-link {
-  margin: 1% auto;
+  margin: 3% auto;
+  cursor: pointer;
 }
 
 .feedback__list-contacts_links {
   text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.feedback__list-contacts_links-icon {
+  margin: 0 0 0 0;
+}
+
+.feedback__list-contacts_links-text {
+  display: block;
+  color: #929b80;
+  padding: 5px;
+}
+
+.feedback__list-contacts_links:hover {
+  -webkit-filter: brightness(1.9);
+          filter: brightness(1.9);
 }
 
 .feedback__title-text {
   color: #ffffff;
   margin: 5% auto 2% auto;
-}
-
-.feedback__form-form input {
-  height: 25px;
 }
 
 .feedback__form-form {
@@ -360,6 +465,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #929b8050;
+  opacity: 0.5;
+  -webkit-transition: 0.5s opacity;
+  transition: 0.5s opacity;
 }
 
 .feedback__form-form_text {
@@ -370,11 +478,13 @@ body {
 
 .feedback__form-form_in-name {
   width: 70%;
+  height: 25px;
   margin: 0 auto;
 }
 
 .feedback__form-form_in-phone {
   width: 70%;
+  height: 25px;
   margin: 0 auto;
 }
 
@@ -389,4 +499,25 @@ body {
   width: 180px;
   height: 40px;
   margin: 5% auto 5% auto;
+  padding: 0 0 3px 0;
+  border: 2px solid #50133c;
+  border-radius: 8px;
+  font-family: "Tahoma Regular";
+  font-size: 20px;
+  background-color: inherit;
+  color: #50133c;
+  cursor: pointer;
+  -webkit-transition-duration: 0.5s, 0.5s;
+          transition-duration: 0.5s, 0.5s;
+  -webkit-transition-property: background-color, color;
+  transition-property: background-color, color;
+  -webkit-transition-delay: 0s, 0.1s;
+          transition-delay: 0s, 0.1s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.feedback__form-form_in-send:hover {
+  background-color: #50133c;
+  color: #ffffff;
 }

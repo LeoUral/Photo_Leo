@@ -88,7 +88,15 @@
                 <div class="content2__text2">Тут размещеные отзывы моих клиентов из разных источников</div>
             </div>
             <div class="comment__response-block">
-                <!-- ! отзывы сделалат в виде карусели -->
+                <button class="comment__response-block_arrow-left" onclick="comment.makeStepLeft()">
+                    <img src="./img/arrow-left.png" width="40" alt="arrow-left">
+                </button>
+                <div class="comment__response-block_block-in">
+                    <!-- ! отзывы сделалат в виде карусели -->
+                </div>
+                <button class="comment__response-block_arrow-right" onclick="comment.makeStepRight()">
+                    <img src="./img/arrow-right.png" width="40" alt="arrow-right">
+                </button>
             </div>
         </section>
         <section class="feedback container">
@@ -100,19 +108,28 @@
                 <div class="feedback__contacts-block">
                     <ul class="feedback__list-contacts">
                         <li class="feedback__list-contacts_contact-link">
-                            <a href="#" class="feedback__list-contacts_links">телефон</a>
+                            <a href="#" class="feedback__list-contacts_links">
+                                <img src="./img/phone_soc_icon.png" alt="phone" width="30" height="30" class="feedback__list-contacts_links-icon">
+                                <span class="feedback__list-contacts_links-text"> +7(963)272-04-17</span>
+                            </a>
                         </li>
                         <li class="feedback__list-contacts_contact-link">
-                            <a href="#" class="feedback__list-contacts_links">электронная почта</a>
+                            <a href="#" class="feedback__list-contacts_links">
+                                <img src="./img/vk_soc_icon.png" alt="VK" width="30" height="30" class="feedback__list-contacts_links-icon">
+                                <span class="feedback__list-contacts_links-text">vk.com/leo.photo</span>
+                            </a>
                         </li>
                         <li class="feedback__list-contacts_contact-link">
-                            <a href="#" class="feedback__list-contacts_links">ссылка на ВК</a>
+                            <a href="#" class="feedback__list-contacts_links">
+                                <img src="./img/instagram_soc_icon.png" alt="instagram" width="30" height="30" class="feedback__list-contacts_links-icon">
+                                <span class="feedback__list-contacts_links-text">@leo.photo_ural</span>
+                            </a>
                         </li>
                         <li class="feedback__list-contacts_contact-link">
-                            <a href="#" class="feedback__list-contacts_links">ссылка на инстаграмм</a>
-                        </li>
-                        <li class="feedback__list-contacts_contact-link">
-                            <a href="#" class="feedback__list-contacts_links">ссылка на телеграмм</a>
+                            <a href="#" class="feedback__list-contacts_links">
+                                <img src="./img/phone_soc_icon.png" alt="telegram" width="30" height="30" class="feedback__list-contacts_links-icon">
+                                <span class="feedback__list-contacts_links-text">telegram</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -136,6 +153,7 @@
     </footer>
 
     <script src="./js/height.js"></script>
+    <script src="./js/comments.js"></script>
 </body>
 
 </html>
