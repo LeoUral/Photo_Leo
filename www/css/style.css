@@ -100,7 +100,7 @@ body {
   text-decoration: none;
   font-size: 20px;
   font-weight: 700;
-  color: #50133c;
+  color: #4e123a;
   border-radius: 20px;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
@@ -111,7 +111,7 @@ body {
 
 .menu__block_link:hover {
   border-radius: 20px;
-  background-color: #50133c;
+  background-color: #4e123a;
   color: #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -122,8 +122,8 @@ body {
   margin: 15% auto 0 auto;
   text-align: center;
   font-size: 60px;
-  color: #50133c;
-  border-bottom: 3px solid #50133c;
+  color: #4e123a;
+  border-bottom: 3px solid #4e123a;
   background-color: #ffffff44;
   -webkit-box-shadow: 0 0 40px 60px #ffffff44;
           box-shadow: 0 0 40px 60px #ffffff44;
@@ -135,7 +135,7 @@ body {
   margin: 0 auto;
   text-align: center;
   font-size: 30px;
-  color: #50133c;
+  color: #4e123a;
   background-color: #ffffff44;
   -webkit-box-shadow: 0 0 40px 60px #ffffff44;
           box-shadow: 0 0 40px 60px #ffffff44;
@@ -275,10 +275,41 @@ body {
 }
 
 .portfolio__photos-block {
-  margin: 1% auto 0 auto;
-  background-color: #929b8050;
-  width: 80%;
+  margin: 0 auto;
+  width: 60%;
   min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.gallary-preview {
+  width: 250px;
+  height: 165px;
+  margin: 15px 10px;
+  -webkit-box-shadow: 3px 3px 15px 0 #515842;
+          box-shadow: 3px 3px 15px 0 #515842;
+  cursor: pointer;
+}
+
+.gallary-preview img {
+  width: 250px;
+  margin: 0;
+  padding: 0;
+}
+
+.gallary-preview:hover {
+  -webkit-box-shadow: 3px 3px 15px 5px #ffffff;
+          box-shadow: 3px 3px 15px 5px #ffffff;
+}
+
+.gallary-preview:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .content2__text2 {
@@ -500,12 +531,12 @@ body {
   height: 40px;
   margin: 5% auto 5% auto;
   padding: 0 0 3px 0;
-  border: 2px solid #50133c;
+  border: 2px solid #4e123a;
   border-radius: 8px;
   font-family: "Tahoma Regular";
   font-size: 20px;
   background-color: inherit;
-  color: #50133c;
+  color: #4e123a;
   cursor: pointer;
   -webkit-transition-duration: 0.5s, 0.5s;
           transition-duration: 0.5s, 0.5s;
@@ -518,6 +549,6 @@ body {
 }
 
 .feedback__form-form_in-send:hover {
-  background-color: #50133c;
+  background-color: #4e123a;
   color: #ffffff;
 }

@@ -227,11 +227,37 @@ body {
     background-size: cover;
     &__photos-block {
         // ! блок для размещения галлереи из JS
-        margin: 1% auto 0 auto;
-        background-color: $colorBG_transparent;
-        width: 80%;
+        margin: 0 auto;
+        // background-color: $colorBG_transparent;
+        width: 60%;
         min-height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
+}
+
+// * галлерея работ
+.gallary-preview {
+    width: 250px;
+    height: 165px;
+    margin: 15px 10px;
+    box-shadow: 3px 3px 15px 0 $colorBG_dark;
+    cursor: pointer;
+}
+
+.gallary-preview img {
+    width: 250px;
+    margin: 0;
+    padding: 0;
+}
+
+.gallary-preview:hover {
+    box-shadow: 3px 3px 15px 5px $colorTextMain;
+}
+
+.gallary-preview:active {
+    box-shadow: none;
 }
 
 .content2 {
