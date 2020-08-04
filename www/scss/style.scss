@@ -244,6 +244,7 @@ body {
     margin: 15px 10px;
     box-shadow: 3px 3px 15px 0 $colorBG_dark;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .gallary-preview img {
@@ -253,7 +254,7 @@ body {
 }
 
 .gallary-preview:hover {
-    box-shadow: 3px 3px 15px 5px $colorTextMain;
+    box-shadow: 0 0 15px 10px $colorTextMain;
 }
 
 .gallary-preview:active {

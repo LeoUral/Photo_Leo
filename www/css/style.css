@@ -294,6 +294,8 @@ body {
   -webkit-box-shadow: 3px 3px 15px 0 #515842;
           box-shadow: 3px 3px 15px 0 #515842;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .gallary-preview img {
@@ -303,8 +305,8 @@ body {
 }
 
 .gallary-preview:hover {
-  -webkit-box-shadow: 3px 3px 15px 5px #ffffff;
-          box-shadow: 3px 3px 15px 5px #ffffff;
+  -webkit-box-shadow: 0 0 15px 10px #ffffff;
+          box-shadow: 0 0 15px 10px #ffffff;
 }
 
 .gallary-preview:active {
