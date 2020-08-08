@@ -17,6 +17,7 @@ class Height {
         })
     }
 
+
     init() {
         this.clientHeight();
         this.sendHeightInStyle();

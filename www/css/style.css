@@ -285,6 +285,8 @@ body {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .gallary-preview {
@@ -312,6 +314,40 @@ body {
 .gallary-preview:active {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.block-gallary {
+  height: 500px;
+  margin: 0 auto;
+}
+
+.btn-gallary {
+  position: relative;
+}
+
+.block-gallary img {
+  height: 100%;
+  margin: 0 auto;
+}
+
+#clousebtn {
+  position: absolute;
+  display: block;
+  color: #ffffff;
+  font-size: 28px;
+  top: 0;
+  right: 50px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 20;
+}
+
+#clousebtn:hover {
+  color: #4e123a;
 }
 
 .content2__text2 {

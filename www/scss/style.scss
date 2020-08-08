@@ -234,6 +234,7 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        transition: 1s;
     }
 }
 
@@ -259,6 +260,39 @@ body {
 
 .gallary-preview:active {
     box-shadow: none;
+}
+
+.block-gallary {
+    height: 500px;
+    margin: 0 auto;
+}
+
+.btn-gallary {
+    position: relative;
+}
+
+.block-gallary img {
+    height: 100%;
+    margin: 0 auto;
+}
+
+#clousebtn {
+    position: absolute;
+    display: block;
+    color: $colorTextMain;
+    font-size: 28px;
+    top: 0;
+    right: 50px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s;
+    z-index: 20;
+}
+
+#clousebtn:hover {
+    color: $colorSecond;
 }
 
 .content2 {
