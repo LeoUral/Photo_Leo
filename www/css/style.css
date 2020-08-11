@@ -10,6 +10,24 @@ body {
   width: 100%;
 }
 
+@-webkit-keyframes manifestation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes manifestation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .container {
   width: 100%;
   background-color: #ccc;
@@ -319,6 +337,8 @@ body {
 .block-gallary {
   height: 500px;
   margin: 0 auto;
+  -webkit-animation: manifestation 1s;
+          animation: manifestation 1s;
 }
 
 .btn-gallary {
@@ -330,7 +350,7 @@ body {
   margin: 0 auto;
 }
 
-#clousebtn {
+.clousebtn {
   position: absolute;
   display: block;
   color: #ffffff;
@@ -346,8 +366,16 @@ body {
   z-index: 20;
 }
 
-#clousebtn:hover {
+.clousebtn:hover {
   color: #4e123a;
+}
+
+.text-click {
+  width: 30%;
+  margin: -1% auto 0 auto;
+  text-align: center;
+  color: #000000;
+  font-size: 14px;
 }
 
 .content2__text2 {
