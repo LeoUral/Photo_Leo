@@ -19,15 +19,42 @@ body {
     }
 }
 
+@keyframes manifestation2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes heightall {
+    from {
+        height: 35px;
+    }
+    to {
+        height: 150px;
+    }
+}
+
 .container {
     width: 100%;
     background-color: #ccc;
     margin: 0 auto;
     font-family: $fontFirst;
+    animation: manifestation2 2s;
 }
 
 .block-off {
     display: none;
+}
+
+.block-invisibility {
+    visibility: hidden;
+}
+
+.block-visible {
+    animation: manifestation 2s;
 }
 
 .head {
@@ -42,11 +69,30 @@ body {
     }
 }
 
+.anchor_up {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 85%;
+    left: 3%;
+    z-index: 99;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 36px;
+    color: $colorSecond;
+    transition: color 0.5s;
+}
+
+.anchor_up:hover {
+    color: $colorTextMain;
+}
+
 .head {
     &__logo {
         width: 12%;
         margin: 0 0 0 10%;
         padding: 3% 0 0 0;
+        text-decoration: none;
         &_image {
             width: 150px;
             min-height: 50px;
@@ -61,7 +107,11 @@ body {
             text-align: center;
             color: $colorTextSecond;
             font-weight: 700;
+            transition: 0.5s;
         }
+    }
+    &__logo:hover &__logo_phone {
+        color: $colorTextMain;
     }
 }
 
@@ -326,10 +376,40 @@ body {
     background-color: $colorBG;
     &__pricing-block {
         // ! блок для размещения галлереи из JS
-        margin: 1% auto 0 auto;
+        margin: 0 auto;
         background-color: $colorTextMain_transparent;
         width: 80%;
         min-height: 500px;
+        padding: 1% 0;
+    }
+    &__pricing-modul {
+        width: 80%;
+        margin: 2% auto;
+        height: 35px;
+        background-color: $colorBG_2;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 3px 3px 5px 0 $colorBG_dark;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: height 1s;
+    }
+    &__pricing-modul h3 {
+        display: block;
+        margin: 0.5% 0 1% 0;
+        padding: 0 2%;
+    }
+    &__pricing-modul span {
+        display: block;
+        margin: 0 0 0 0;
+        padding: 0 2%;
+    }
+    &__pricing-modul p {
+        padding: 0 2%;
+    }
+    &__pricing-modul:hover {
+        height: 150px;
+        animation: heightall 1s;
     }
 }
 
@@ -424,6 +504,7 @@ body {
     &__list-contacts {
         list-style-type: none;
         &_contact-link {
+            width: 60%;
             margin: 3% auto;
             cursor: pointer;
         }
@@ -464,19 +545,52 @@ body {
         }
         &_in-name {
             width: 70%;
-            height: 25px;
+            height: 28px;
             margin: 0 auto;
+            padding: 0 5px 0 10px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            border: none;
+            color: $colorSecond;
+            font-family: $fontFirst;
+            font-weight: 700;
+        }
+        &_in-name:focus {
+            background-color: $colorBG_2_transparent;
+            outline: none;
         }
         &_in-phone {
             width: 70%;
-            height: 25px;
+            height: 28px;
             margin: 0 auto;
+            padding: 0 0 0 10px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            border: none;
+            color: $colorSecond;
+            font-family: $fontFirst;
+            font-weight: 700;
+        }
+        &_in-phone:focus {
+            background-color: $colorBG_2_transparent;
+            outline: none;
         }
         &_in-text {
             width: 70%;
             height: 70px;
             resize: none;
             margin: 0 auto;
+            padding: 5px 5px 0 10px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            border: none;
+            color: $colorSecond;
+            font-family: $fontFirst;
+            font-weight: 700;
+        }
+        &_in-text:focus {
+            background-color: $colorBG_2_transparent;
+            outline: none;
         }
         &_in-send {
             width: 180px;
@@ -499,5 +613,31 @@ body {
             background-color: $colorSecond;
             color: $colorTextMain;
         }
+    }
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $colorSecond;
+    opacity: 0;
+    transition: 1s;
+    &__links-maker {
+        display: block;
+        float: right;
+        width: 30%;
+        text-decoration: none;
+        color: $colorTextMain_transparent;
+        transition: 1s;
+        &_text {
+            margin: 0 50px 0 0;
+            padding: 15px 0;
+            text-align: right;
+        }
+    }
+    &__links-maker:hover {
+        color: $colorTextMain;
     }
 }

@@ -1,5 +1,5 @@
 'use strict'
-// галлерея работ
+// галерея работ
 
 class Gallary {
     constructor() {
@@ -8,7 +8,7 @@ class Gallary {
         this.blockGallry = document.querySelector('.portfolio__photos-block');
         this.heightGallary = document.documentElement.clientHeight;
         this.width = 0;
-        this.quantity = 9; // количество галлерей для просмотра
+        this.quantity = 9; // количество галерей для просмотра
         this.quantityImage = 14; //количество фото в галлерее
         this.selectGallary = '';
         this.viewSelectGallary = `<div class="block-gallary">`;
@@ -37,7 +37,7 @@ class Gallary {
                 console.log(this.selectGallary); // ! определение нажатой галлереи 
                 this.creatSelectedGallary(); //формируем архив фотографий
                 this.creatButtonClouse();// вставляем в верстку кнопку возврата
-                this.viewInScreen(); // просмотр фотографий выбранной галлереии кликом мышки
+                this.viewInScreen(); // просмотр фотографий выбранной галереии кликом мышки
             }
         })
     }
@@ -93,7 +93,7 @@ class Gallary {
         idClouse.addEventListener('click', () => {
             this.indexImage = 0;
             // this.creatPreviewGallary();
-            location.reload();//перезагрузка страницы
+            location.reload();// ! перезагрузка страницы, поменять действие
         })
     }
 
