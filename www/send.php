@@ -24,6 +24,11 @@ $headers = 'Content-type: text/html; charset=utf-8';
 //echo "<br>";
 //echo $email;
 
-mail("leoural66@yandex.ru", "Заявка с сайта", "Имя: " . $fio . ". Телефон: " . $email . ". Коментарий: " . $text, $headers);
+mail(
+    "leoural66@yandex.ru",
+    "Заявка с сайта",
+    "Имя: " . $fio . " Телефон: " . $email . ". Коментарий: " . $text,
+    $headers
+);
 
 header("Location: http://www.leo-photo.ru/form.html");
