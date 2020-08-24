@@ -116,36 +116,45 @@ body {
 }
 
 .menu {
-    width: 50%;
+    width: 10%;
+    position: fixed;
+    left: 1%;
+    top: 18%;
+    z-index: 10;
     &__block {
-        width: 100%;
+        width: 150px;
         margin: 6.2% 0 0 0;
         padding: 0;
         display: flex;
         flex-wrap: nowrap;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: flex-end;
         &_item {
             display: block;
-            width: 20%;
-            margin: 0 3% 0 0;
+            width: 100%;
+            margin: 10px 3% 0 0;
             list-style-type: none;
             box-sizing: border-box;
         }
         &_link {
+            width: 100%;
             display: block;
             text-align: center;
             padding: 4px 0 6px 0;
             text-decoration: none;
-            font-size: 20px;
+            text-transform: uppercase;
+            font-size: 16px;
             font-weight: 700;
             color: $colorSecond;
             border-radius: 20px;
+            background-color: $colorBG_2_transparent;
+            box-sizing: border-box;
             transition-duration: 0.5s;
-            transition-property: background-color;
+            transition-property: background-color, width;
             cursor: pointer;
         }
         &_link:hover {
+            width: 120%;
             border-radius: 20px;
             background-color: $colorSecond;
             color: $colorTextMain;
@@ -339,10 +348,10 @@ body {
 .clousebtn {
     position: absolute;
     display: block;
-    color: $colorTextMain;
-    font-size: 28px;
+    color: $colorSecond;
+    font-size: 40px;
     top: 0;
-    right: 50px;
+    right: 250px;
     background-color: inherit;
     border: none;
     cursor: pointer;
@@ -352,7 +361,36 @@ body {
 }
 
 .clousebtn:hover {
+    color: $colorTextMain;
+}
+
+.arrow {
+    background-color: inherit;
     color: $colorSecond;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s;
+}
+
+.arrow:hover {
+    color: $colorTextMain;
+}
+
+.left {
+    position: absolute;
+    right: 300px;
+    top: 3px;
+    transform: rotate(180deg);
+    z-index: 20;
+}
+
+.right {
+    position: absolute;
+    right: 195px;
+    top: -1px;
+    z-index: 20;
 }
 
 .text-click {
@@ -514,6 +552,9 @@ body {
             flex-direction: row;
             transition-duration: 0.5s;
         }
+        &_links img {
+            filter: brightness(1.7);
+        }
         &_links-icon {
             margin: 0 0 0 0;
         }
@@ -521,9 +562,10 @@ body {
             display: block;
             color: $colorBG;
             padding: 5px;
+            filter: brightness(1.7);
         }
         &_links:hover {
-            filter: brightness(1.9);
+            filter: brightness(0.6);
         }
     }
     &__title-text {
