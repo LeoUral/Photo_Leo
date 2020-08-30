@@ -683,3 +683,9 @@ body {
         color: $colorTextMain;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .comment-block {
+        min-height: 430px;
+    }
+}

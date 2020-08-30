@@ -849,3 +849,9 @@ body {
 .footer__links-maker:hover {
   color: #ffffff;
 }
+
+@media screen and (max-width: 1000px) {
+  .comment-block {
+    min-height: 430px;
+  }
+}
