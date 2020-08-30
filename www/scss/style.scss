@@ -19,15 +19,42 @@ body {
     }
 }
 
+@keyframes manifestation2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes heightall {
+    from {
+        height: 35px;
+    }
+    to {
+        height: 150px;
+    }
+}
+
 .container {
     width: 100%;
     background-color: #ccc;
     margin: 0 auto;
     font-family: $fontFirst;
+    animation: manifestation2 2s;
 }
 
 .block-off {
     display: none;
+}
+
+.block-invisibility {
+    visibility: hidden;
+}
+
+.block-visible {
+    animation: manifestation 2s;
 }
 
 .head {
@@ -42,11 +69,30 @@ body {
     }
 }
 
+.anchor_up {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 85%;
+    left: 3%;
+    z-index: 99;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 36px;
+    color: $colorSecond;
+    transition: color 0.5s;
+}
+
+.anchor_up:hover {
+    color: $colorTextMain;
+}
+
 .head {
     &__logo {
         width: 12%;
         margin: 0 0 0 10%;
         padding: 3% 0 0 0;
+        text-decoration: none;
         &_image {
             width: 150px;
             min-height: 50px;
@@ -61,41 +107,54 @@ body {
             text-align: center;
             color: $colorTextSecond;
             font-weight: 700;
+            transition: 0.5s;
         }
+    }
+    &__logo:hover &__logo_phone {
+        color: $colorTextMain;
     }
 }
 
 .menu {
-    width: 50%;
+    width: 10%;
+    position: fixed;
+    left: 1%;
+    top: 18%;
+    z-index: 10;
     &__block {
-        width: 100%;
+        width: 150px;
         margin: 6.2% 0 0 0;
         padding: 0;
         display: flex;
         flex-wrap: nowrap;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: flex-end;
         &_item {
             display: block;
-            width: 20%;
-            margin: 0 3% 0 0;
+            width: 100%;
+            margin: 10px 3% 0 0;
             list-style-type: none;
             box-sizing: border-box;
         }
         &_link {
+            width: 100%;
             display: block;
             text-align: center;
             padding: 4px 0 6px 0;
             text-decoration: none;
-            font-size: 20px;
+            text-transform: uppercase;
+            font-size: 16px;
             font-weight: 700;
             color: $colorSecond;
             border-radius: 20px;
+            background-color: $colorBG_2_transparent;
+            box-sizing: border-box;
             transition-duration: 0.5s;
-            transition-property: background-color;
+            transition-property: background-color, width;
             cursor: pointer;
         }
         &_link:hover {
+            width: 120%;
             border-radius: 20px;
             background-color: $colorSecond;
             color: $colorTextMain;
@@ -289,10 +348,10 @@ body {
 .clousebtn {
     position: absolute;
     display: block;
-    color: $colorTextMain;
-    font-size: 28px;
+    color: $colorSecond;
+    font-size: 40px;
     top: 0;
-    right: 50px;
+    right: 250px;
     background-color: inherit;
     border: none;
     cursor: pointer;
@@ -302,7 +361,36 @@ body {
 }
 
 .clousebtn:hover {
+    color: $colorTextMain;
+}
+
+.arrow {
+    background-color: inherit;
     color: $colorSecond;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s;
+}
+
+.arrow:hover {
+    color: $colorTextMain;
+}
+
+.left {
+    position: absolute;
+    right: 300px;
+    top: 3px;
+    transform: rotate(180deg);
+    z-index: 20;
+}
+
+.right {
+    position: absolute;
+    right: 195px;
+    top: -1px;
+    z-index: 20;
 }
 
 .text-click {
@@ -326,10 +414,40 @@ body {
     background-color: $colorBG;
     &__pricing-block {
         // ! блок для размещения галлереи из JS
-        margin: 1% auto 0 auto;
+        margin: 0 auto;
         background-color: $colorTextMain_transparent;
         width: 80%;
         min-height: 500px;
+        padding: 1% 0;
+    }
+    &__pricing-modul {
+        width: 80%;
+        margin: 2% auto;
+        height: 35px;
+        background-color: $colorBG_2;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 3px 3px 5px 0 $colorBG_dark;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: height 1s;
+    }
+    &__pricing-modul h3 {
+        display: block;
+        margin: 0.5% 0 1% 0;
+        padding: 0 2%;
+    }
+    &__pricing-modul span {
+        display: block;
+        margin: 0 0 0 0;
+        padding: 0 2%;
+    }
+    &__pricing-modul p {
+        padding: 0 2%;
+    }
+    &__pricing-modul:hover {
+        height: 150px;
+        animation: heightall 1s;
     }
 }
 
@@ -424,6 +542,7 @@ body {
     &__list-contacts {
         list-style-type: none;
         &_contact-link {
+            width: 60%;
             margin: 3% auto;
             cursor: pointer;
         }
@@ -433,6 +552,9 @@ body {
             flex-direction: row;
             transition-duration: 0.5s;
         }
+        &_links img {
+            filter: brightness(1.7);
+        }
         &_links-icon {
             margin: 0 0 0 0;
         }
@@ -440,9 +562,10 @@ body {
             display: block;
             color: $colorBG;
             padding: 5px;
+            filter: brightness(1.7);
         }
         &_links:hover {
-            filter: brightness(1.9);
+            filter: brightness(0.6);
         }
     }
     &__title-text {
@@ -464,19 +587,52 @@ body {
         }
         &_in-name {
             width: 70%;
-            height: 25px;
+            height: 28px;
             margin: 0 auto;
+            padding: 0 5px 0 10px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            border: none;
+            color: $colorSecond;
+            font-family: $fontFirst;
+            font-weight: 700;
+        }
+        &_in-name:focus {
+            background-color: $colorBG_2_transparent;
+            outline: none;
         }
         &_in-phone {
             width: 70%;
-            height: 25px;
+            height: 28px;
             margin: 0 auto;
+            padding: 0 0 0 10px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            border: none;
+            color: $colorSecond;
+            font-family: $fontFirst;
+            font-weight: 700;
+        }
+        &_in-phone:focus {
+            background-color: $colorBG_2_transparent;
+            outline: none;
         }
         &_in-text {
             width: 70%;
             height: 70px;
             resize: none;
             margin: 0 auto;
+            padding: 5px 5px 0 10px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            border: none;
+            color: $colorSecond;
+            font-family: $fontFirst;
+            font-weight: 700;
+        }
+        &_in-text:focus {
+            background-color: $colorBG_2_transparent;
+            outline: none;
         }
         &_in-send {
             width: 180px;
@@ -499,5 +655,31 @@ body {
             background-color: $colorSecond;
             color: $colorTextMain;
         }
+    }
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $colorSecond;
+    opacity: 0;
+    transition: 1s;
+    &__links-maker {
+        display: block;
+        float: right;
+        width: 30%;
+        text-decoration: none;
+        color: $colorTextMain_transparent;
+        transition: 1s;
+        &_text {
+            margin: 0 50px 0 0;
+            padding: 15px 0;
+            text-align: right;
+        }
+    }
+    &__links-maker:hover {
+        color: $colorTextMain;
     }
 }

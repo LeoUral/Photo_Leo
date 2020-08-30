@@ -11,22 +11,24 @@
 <body>
 
     <header>
-        <section class="head container">
+        <section id="anchor-up" class="head container">
             <div class="head__box">
-                <div class="head__logo">
+
+                <a class="head__logo" href="tel:+79632720417">
                     <div class="head__logo_image">
                     </div>
                     <div class="head__logo_phone">
                         +7(963)272-04-17
                     </div>
-                </div>
-                <nav class="menu">
+                </a>
+                <nav id="menu" class="menu">
+                    <a class="anchor_up" href="#anchor-up">&#9650;</a>
                     <ul class="menu__block">
-                        <li class="menu__block_item"><a href="#" class="menu__block_link">обо мне</a></li>
-                        <li class="menu__block_item"><a href="#" class="menu__block_link">портфолио</a></li>
-                        <li class="menu__block_item"><a href="#" class="menu__block_link">цены</a></li>
-                        <li class="menu__block_item"><a href="#" class="menu__block_link">отзывы</a></li>
-                        <li class="menu__block_item"><a href="#" class="menu__block_link">контакты</a></li>
+                        <li class="menu__block_item"><a href="#anchor-1" class="menu__block_link">обо мне</a></li>
+                        <li class="menu__block_item"><a href="#anchor-2" class="menu__block_link">портфолио</a></li>
+                        <li class="menu__block_item"><a href="#anchor-3" class="menu__block_link">цены</a></li>
+                        <li class="menu__block_item"><a href="#anchor-4" class="menu__block_link">отзывы</a></li>
+                        <li class="menu__block_item"><a href="#anchor-5" class="menu__block_link">контакты</a></li>
                     </ul>
                 </nav>
             </div>
@@ -37,7 +39,7 @@
     </header>
 
     <main>
-        <section class="about container">
+        <section id="anchor-1" class="about container block-invisibility">
             <div class="title">Приветствую Вас!</div>
             <div class="content">
                 <div class="content__text">
@@ -49,32 +51,30 @@
             </div>
             <div class="buttons-block">
                 <div class="btns-block__look-portfolio">
-                    <a href="#" class="btns-block__look-portfolio_link">
+                    <a href="#anchor-2" class="btns-block__look-portfolio_link">
                         <div class="btns-block__look-portfolio_img-port"></div>
                         <span class="btns-block__look-portfolio_text">посмотреть портфолио</span>
                     </a>
                 </div>
                 <div class="btns-block__look-price">
-                    <a href="#" class="btns-block__look-price_link">
+                    <a href="#anchor-3" class="btns-block__look-price_link">
                         <div class="btns-block__look-price_img-price"></div>
                         <span class="btns-block__look-price_text">узнать цены</span>
                     </a>
                 </div>
             </div>
         </section>
-        <section class="portfolio container">
-            <!-- ! блок изменен и отличается от дизайна -->
+        <section id="anchor-2" class="portfolio container block-invisibility">
             <div class="title">Мои работы</div>
             <div class="content2 btn-gallary">
-                <div class="content2__text2 clouse-btn">В этих галлереях размещены не все мои работы.</div>
+                <div class="content2__text2 clouse-btn">В этих галереях размещены не все мои работы.</div>
                 <!--<button id="clousebtn" class="clousebtn">закрыть просмотр</button>-->
             </div>
             <div class="portfolio__photos-block">
                 <!-- ! разместить модуль JS для выбора просмотра работ -->
             </div>
         </section>
-        <section class="price container">
-            <!-- ! Блок создать самостоятельно использую общий дизайн -->
+        <section id="anchor-3" class="price container block-invisibility">
             <div class="title">стоимость работ</div>
             <div class="content2">
                 <div class="content2__text2">Расскажу Вам о стоимости работ</div>
@@ -83,7 +83,7 @@
                 <!-- ! тут блок с ценами -->
             </div>
         </section>
-        <section class="comment container">
+        <section id="anchor-4" class="comment container block-invisibility">
             <div class="title">отзывы</div>
             <div class="content2">
                 <div class="content2__text2">Тут размещеные отзывы моих клиентов из разных источников</div>
@@ -100,7 +100,7 @@
                 </button>
             </div>
         </section>
-        <section class="feedback container">
+        <section id="anchor-5" class="feedback container block-invisibility">
             <div class="title">контакты</div>
             <div class="content2">
                 <div class="content2__text2">Со мной можно связаться разными способами, выбирайте</div>
@@ -109,25 +109,25 @@
                 <div class="feedback__contacts-block">
                     <ul class="feedback__list-contacts">
                         <li class="feedback__list-contacts_contact-link">
-                            <a href="#" class="feedback__list-contacts_links">
+                            <a href="tel:+79632720417" class="feedback__list-contacts_links">
                                 <img src="./img/phone_soc_icon.png" alt="phone" width="30" height="30" class="feedback__list-contacts_links-icon">
                                 <span class="feedback__list-contacts_links-text"> +7(963)272-04-17</span>
                             </a>
                         </li>
                         <li class="feedback__list-contacts_contact-link">
-                            <a href="#" class="feedback__list-contacts_links">
+                            <a href="https://vk.com/leo.photo" target="_blank" class="feedback__list-contacts_links">
                                 <img src="./img/vk_soc_icon.png" alt="VK" width="30" height="30" class="feedback__list-contacts_links-icon">
                                 <span class="feedback__list-contacts_links-text">vk.com/leo.photo</span>
                             </a>
                         </li>
                         <li class="feedback__list-contacts_contact-link">
-                            <a href="#" class="feedback__list-contacts_links">
+                            <a href="https://www.instagram.com/leo.photo_ural/" target="_blank" class="feedback__list-contacts_links">
                                 <img src="./img/instagram_soc_icon.png" alt="instagram" width="30" height="30" class="feedback__list-contacts_links-icon">
                                 <span class="feedback__list-contacts_links-text">@leo.photo_ural</span>
                             </a>
                         </li>
                         <li class="feedback__list-contacts_contact-link">
-                            <a href="#" class="feedback__list-contacts_links">
+                            <a href="https://t.me/LeoUral" target="_blank" class="feedback__list-contacts_links">
                                 <img src="./img/phone_soc_icon.png" alt="telegram" width="30" height="30" class="feedback__list-contacts_links-icon">
                                 <span class="feedback__list-contacts_links-text">telegram</span>
                             </a>
@@ -135,14 +135,14 @@
                     </ul>
                 </div>
                 <!-- ! Блок для размещения формы -->
-                <form action="#" class="feedback__form-form">
+                <form class="feedback__form-form" action="send.php" method="POST">
                     <div class="feedback__title-text">Оставте сообщение и я свяжусь с Вами</div>
                     <label for="" class="feedback__form-form_text">Ваше имя</label>
-                    <input type="text" class="feedback__form-form_in-name" placeholder="Ваше имя">
+                    <input type="text" id="name" class="feedback__form-form_in-name" placeholder="Ваше имя" name="name">
                     <label for="" class="feedback__form-form_text">Ваш телефон</label>
-                    <input type="tel" class="feedback__form-form_in-phone" placeholder="телефон" name="phone">
+                    <input type="tel" id="phone" class="feedback__form-form_in-phone" placeholder="Телефон" name="phone">
                     <label for="" class="feedback__form-form_text">Ваш коментарий</label>
-                    <textarea type="text" class="feedback__form-form_in-text" placeholder="коментарий"></textarea>
+                    <textarea type="text" id="text" class="feedback__form-form_in-text" placeholder="коментарий" name="text"></textarea>
                     <input type="submit" class="feedback__form-form_in-send" value="отправить">
                 </form>
             </div>
@@ -150,7 +150,11 @@
     </main>
 
     <footer>
-
+        <section class="footer block-invisibility">
+            <a class="footer__links-maker" href="https://t.me/LeoUral" target="_blank">
+                <div class="footer__links-maker_text">Kudryashov Leonid 2020</div>
+            </a>
+        </section>
     </footer>
 
     <script src="./js/height.js"></script>
@@ -158,6 +162,27 @@
     <script src="./js/gallary.js"></script>
     <script src="./js/scrolling.js"></script>
     <script src="./js/price.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //обращение к блоку #menu
+            $("#menu").on("click", "a", function(event) {
+                event.preventDefault();
+                var id = $(this).attr('href'), // определяем якорь на который будет переход
+                    top = $(id).offset().top; // определяем растояние до выбранного блока
+                $('body,html').animate({
+                    scrollTop: top
+                }, 1500); // время на переход в милисекундах
+            });
+        });
+    </script>
+    <script src="./js/maskedinput.js"></script>
+    <!-- маска ввода телефона -->
+    <script type="text/javascript">
+        jQuery(function($) {
+            $("#phone").mask("+7(999) 999-9999");
+        });
+    </script>
 </body>
 
 </html>

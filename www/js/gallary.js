@@ -1,5 +1,5 @@
 'use strict'
-// галлерея работ
+// галерея работ
 
 class Gallary {
     constructor() {
@@ -8,13 +8,15 @@ class Gallary {
         this.blockGallry = document.querySelector('.portfolio__photos-block');
         this.heightGallary = document.documentElement.clientHeight;
         this.width = 0;
-        this.quantity = 9; // количество галлерей для просмотра
+        this.quantity = 9; // количество галерей для просмотра
         this.quantityImage = 14; //количество фото в галлерее
         this.selectGallary = '';
         this.viewSelectGallary = `<div class="block-gallary">`;
         this.arrImage = [];
         this.indexImage = 0;
         this.heightViewBlock = '';
+        this.arrowLeft;
+        this.arrowRight;
     }
 
     creatPreviewGallary() {
@@ -37,7 +39,7 @@ class Gallary {
                 console.log(this.selectGallary); // ! определение нажатой галлереи 
                 this.creatSelectedGallary(); //формируем архив фотографий
                 this.creatButtonClouse();// вставляем в верстку кнопку возврата
-                this.viewInScreen(); // просмотр фотографий выбранной галлереии кликом мышки
+                this.viewInScreen(); // просмотр фотографий выбранной галереии кликом мышки
             }
         })
     }
@@ -55,26 +57,53 @@ class Gallary {
 
     viewSelectedImage(index) {
         this.blockGallry.innerHTML = this.arrImage[index];
-        this.indexImage++;
+        // this.indexImage++;
         console.log(this.indexImage);
         this.sendHeightInStyleView();
     }
 
     viewInScreen() {
         this.viewSelectedImage(this.indexImage);
-        this.blockGallry.addEventListener('click', () => {
-            this.creatHandler()
-        });
+        // this.blockGallry.addEventListener('click', () => {
+        //     this.creatHandler()
+        // });
+        this.pressedLeftArrow();
+        this.pressedRightArrow();
         this.createClouseGallary();
     }
 
-    creatHandler() {
-        this.viewSelectedImage(this.indexImage);
-        if (this.indexImage < this.quantityImage) {
-            return;
-        } else {
+    // creatHandler() {
+    //     this.viewSelectedImage(this.indexImage);
+    //     if (this.indexImage < this.quantityImage) {
+    //         return;
+    //     } else {
+    //         this.indexImage = 0;
+    //     }
+    // }
+
+    chekIndexImage() {
+        if (this.indexImage > this.quantityImage - 1) {
             this.indexImage = 0;
+        } else if (this.indexImage < 0) {
+            this.indexImage = this.quantityImage - 1;
         }
+    }
+
+    pressedLeftArrow() {
+        this.arrowLeft = document.getElementById('left');
+        this.arrowLeft.addEventListener('click', () => {
+            this.indexImage--;
+            this.chekIndexImage();
+            this.viewSelectedImage(this.indexImage);
+        })
+    }
+    pressedRightArrow() {
+        this.arrowRight = document.getElementById('right');
+        this.arrowRight.addEventListener('click', () => {
+            this.indexImage++;
+            this.chekIndexImage();
+            this.viewSelectedImage(this.indexImage);
+        })
     }
 
     sendHeightInStyleView() {
@@ -84,8 +113,11 @@ class Gallary {
     creatButtonClouse() {
         let clouseBtn = document.querySelector('.clouse-btn');
         clouseBtn.insertAdjacentHTML('afterend', `
-                    <button id="clousebtn" class="clousebtn">закрыть просмотр</button>
-                    <div class="text-click">нажмите фото</div>`);
+                <div class="arrows">
+                    <button id="left" class="arrow left">&#10148;</button>
+                    <button id="clousebtn" class="clousebtn">&#10006;</button>
+                    <button id="right" class="arrow right">&#10148;</button>
+                </div>`);
     }
 
     createClouseGallary() {
@@ -93,7 +125,7 @@ class Gallary {
         idClouse.addEventListener('click', () => {
             this.indexImage = 0;
             // this.creatPreviewGallary();
-            location.reload();//перезагрузка страницы
+            location.reload();// ! перезагрузка страницы, поменять действие
         })
     }
 
