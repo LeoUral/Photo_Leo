@@ -37,6 +37,15 @@ body {
     }
 }
 
+@keyframes heightall-mobile {
+    from {
+        height: 35px;
+    }
+    to {
+        height: 200px;
+    }
+}
+
 .container {
     width: 100%;
     background-color: #ccc;
@@ -345,13 +354,31 @@ body {
     margin: 0 auto;
 }
 
+.arrows {
+    width: 100%;
+    height: 40px;
+}
+
+.arrow {
+    background-color: inherit;
+    color: $colorSecond;
+    border: none;
+    font-size: 40px;
+    outline: none;
+    transition: 0.5s;
+}
+
+.arrow:hover {
+    color: $colorTextMain;
+}
+
 .clousebtn {
     position: absolute;
     display: block;
     color: $colorSecond;
     font-size: 40px;
-    top: 0;
-    right: 250px;
+    top: 19px;
+    right: 200px;
     background-color: inherit;
     border: none;
     cursor: pointer;
@@ -364,32 +391,20 @@ body {
     color: $colorTextMain;
 }
 
-.arrow {
-    background-color: inherit;
-    color: $colorSecond;
-    border: none;
-    font-size: 40px;
-    cursor: pointer;
-    outline: none;
-    transition: 0.5s;
-}
-
-.arrow:hover {
-    color: $colorTextMain;
-}
-
 .left {
     position: absolute;
-    right: 300px;
-    top: 3px;
+    right: 250px;
+    top: 23px;
+    cursor: pointer;
     transform: rotate(180deg);
     z-index: 20;
 }
 
 .right {
     position: absolute;
-    right: 195px;
-    top: -1px;
+    right: 145px;
+    top: 18px;
+    cursor: pointer;
     z-index: 20;
 }
 
@@ -685,7 +700,68 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-    .comment-block {
-        min-height: 430px;
+    .menu {
+        display: none;
+    }
+    .comment {
+        display: none;
+    }
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .content__text {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .content__image {
+        width: 80%;
+        margin: 0 auto;
+        min-height: 200px;
+    }
+    .buttons-block {
+        width: 50%;
+    }
+    .btns-block__look-portfolio_text,
+    .btns-block__look-price_text {
+        text-align: center;
+    }
+    .title {
+        width: 80%;
+    }
+    .content2__text2 {
+        width: 80%;
+    }
+    .portfolio__photos-block {
+        width: 80%;
+    }
+    .price__pricing-modul:hover {
+        height: 200px;
+        animation: heightall-mobile 1s;
+    }
+    .price__pricing-modul h3 {
+        font-size: 14px;
+        margin: 0.5% 0 5% 0;
+    }
+    .price__pricing-modul span {
+        font-size: 14px;
+    }
+    .price__pricing-modul p {
+        font-size: 12px;
+    }
+    .feedback__contacts-block {
+        margin: 0 auto;
+    }
+    .feedback .title {
+        color: $colorTextMain;
+    }
+    .feedback .content2__text2 {
+        color: $colorTextMain;
+    }
+    .feedback__form-form {
+        margin: 0 auto;
+    }
+    .clouse-btn {
+        font-size: 14px;
     }
 }

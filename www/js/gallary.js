@@ -7,6 +7,7 @@ class Gallary {
         this.gallryHTMLBlock = '';
         this.blockGallry = document.querySelector('.portfolio__photos-block');
         this.heightGallary = document.documentElement.clientHeight;
+        this.widthGallary = document.documentElement.clientWidth;
         this.width = 0;
         this.quantity = 9; // количество галерей для просмотра
         this.quantityImage = 14; //количество фото в галлерее
@@ -107,7 +108,12 @@ class Gallary {
     }
 
     sendHeightInStyleView() {
-        document.querySelector('.block-gallary').style.height = (this.heightGallary * 0.70) + 'px';
+        if (this.widthGallary > 1000) {
+            document.querySelector('.block-gallary').style.height = (this.heightGallary * 0.70) + 'px';
+        } else {
+            document.querySelector('.block-gallary').style.height = (this.heightGallary * 0.40) + 'px';
+        }
+
     }
 
     creatButtonClouse() {
