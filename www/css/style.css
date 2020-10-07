@@ -948,4 +948,10 @@ body {
   .feedback__form-form {
     width: 95%;
   }
+  .headihg {
+    width: 40%;
+    margin: 15% auto 0 auto;
+    text-align: center;
+    font-size: 42px;
+  }
 }
