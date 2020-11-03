@@ -1,4 +1,4 @@
-'use stict'
+'use strict'
 
 class Scrolling {
     constructor() {
@@ -6,7 +6,7 @@ class Scrolling {
         this.sizeModul = 0; // размер одного модуля sizeMod
         this.quantityModul = 6; // количество модулей sizeQuant
         this.visibilitySize = 200; //проявление при прокрутке sizeY
-        this.positionMouse = 100; //нижняя точка реакции мыши
+        this.positionMouse = 200; //нижняя точка реакции мыши
         this.module_1 = document.querySelector('.about');
         this.module_2 = document.querySelector('.portfolio');//! пересчитать размер для условия
         this.module_3 = document.querySelector('.price');
