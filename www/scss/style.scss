@@ -202,7 +202,18 @@ body {
 }
 
 .about {
-    background-color: $colorBG;
+    background-image: url("../img/fon-4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.about .title {
+    color: #eee;
+}
+
+.about p {
+    color: #eee;
 }
 
 .title {
@@ -298,7 +309,7 @@ body {
 }
 
 .portfolio {
-    background-image: url("../img/fon_price.jpg");
+    background-image: url("../img/fon-1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -313,6 +324,14 @@ body {
         justify-content: space-around;
         transition: 1s;
     }
+}
+
+.portfolio .title {
+    color: $colorBG_2;
+}
+
+.portfolio .content2__text2 {
+    color: $colorBG_2;
 }
 
 // * галлерея работ
@@ -361,7 +380,7 @@ body {
 
 .arrow {
     background-color: inherit;
-    color: $colorSecond;
+    color: $colorTextMain_transparent;
     border: none;
     font-size: 40px;
     outline: none;
@@ -375,7 +394,7 @@ body {
 .clousebtn {
     position: absolute;
     display: block;
-    color: $colorSecond;
+    color: $colorTextMain_transparent;
     font-size: 40px;
     top: 19px;
     right: 200px;
@@ -426,7 +445,10 @@ body {
 }
 
 .price {
-    background-color: $colorBG;
+    background-image: url("../img/fon-9.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     &__pricing-block {
         // ! блок для размещения галлереи из JS
         margin: 0 auto;
