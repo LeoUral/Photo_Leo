@@ -95,6 +95,13 @@ body {
   display: none;
 }
 
+.btn-off {
+  color: #fff !important;
+  background-color: #ccc !important;
+  border: 1px solid #fff !important;
+  cursor: none !important;
+}
+
 .block-invisibility {
   visibility: hidden;
 }
@@ -269,7 +276,18 @@ body {
 }
 
 .about {
-  background-color: #929b80;
+  background-image: url("../img/fon-4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about .title {
+  color: #eee;
+}
+
+.about p {
+  color: #eee;
 }
 
 .title {
@@ -387,7 +405,7 @@ body {
 }
 
 .portfolio {
-  background-image: url("../img/fon_price.jpg");
+  background-image: url("../img/fon-1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -406,6 +424,14 @@ body {
       justify-content: space-around;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+.portfolio .title {
+  color: #cab7c3;
+}
+
+.portfolio .content2__text2 {
+  color: #cab7c3;
 }
 
 .gallary-preview {
@@ -458,7 +484,7 @@ body {
 
 .arrow {
   background-color: inherit;
-  color: #4e123a;
+  color: #ffffff44;
   border: none;
   font-size: 40px;
   outline: none;
@@ -473,7 +499,7 @@ body {
 .clousebtn {
   position: absolute;
   display: block;
-  color: #4e123a;
+  color: #ffffff44;
   font-size: 40px;
   top: 19px;
   right: 200px;
@@ -524,7 +550,10 @@ body {
 }
 
 .price {
-  background-color: #929b80;
+  background-image: url("../img/fon-9.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .price__pricing-block {
