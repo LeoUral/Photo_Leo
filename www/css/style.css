@@ -95,6 +95,13 @@ body {
   display: none;
 }
 
+.btn-off {
+  color: #fff !important;
+  background-color: #ccc !important;
+  border: 1px solid #fff !important;
+  cursor: none !important;
+}
+
 .block-invisibility {
   visibility: hidden;
 }
