@@ -143,7 +143,7 @@
                     <label for="" class="feedback__form-form_text">Ваш телефон</label>
                     <input type="tel" id="phone" class="feedback__form-form_in-phone" placeholder="Телефон" name="phone">
                     <label for="" class="feedback__form-form_text">Ваш коментарий</label>
-                    <textarea type="text" id="text" class="feedback__form-form_in-text" placeholder="коментарий (250 символов)" name="text" maxlength="250"></textarea>
+                    <textarea type="text" id="text" class="feedback__form-form_in-text" placeholder="коментарий (150 символов)" name="text" maxlength="150"></textarea>
                     <input type="submit" id="button_submit" class="feedback__form-form_in-send btn-off" value="отправить">
                 </form>
             </div>
@@ -161,7 +161,7 @@
     <script>
         text.oncut = text.oncopy = text.onpaste = function(event) {
             return false;
-        };
+        }; // отключаем копирование и вставку текста
     </script>
 
     <script src="./js/height.js"></script>
